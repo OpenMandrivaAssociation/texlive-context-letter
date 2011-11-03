@@ -1,3 +1,9 @@
+# revision 24045
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-letter
+# catalog-date 2011-09-20 21:18:19 +0200
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-context-letter
 Version:	20110920
 Release:	1
@@ -104,6 +110,7 @@ letters may be amended by a wide range of style specifications.
 %doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-resume-interface.tex
 %doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-revision.tex
 %doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -114,3 +121,5 @@ letters may be amended by a wide range of style specifications.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
