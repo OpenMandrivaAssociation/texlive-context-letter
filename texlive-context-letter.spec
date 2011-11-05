@@ -16,12 +16,12 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.do
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
-Requires:	texlive-context
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
+Requires(post):	texlive-context
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 Conflicts:	texlive-source <= 20110705-3
-Requires(post):	texlive-context.bin
 
 %description
 A means of writing 'vanilla' letters is provided; the design of
@@ -32,8 +32,8 @@ letters may be amended by a wide range of style specifications.
     %_texmf_mktexlsr_pre
 
 %post
-    %_texmf_mtxrun_post
     %_texmf_mktexlsr_post
+    %_texmf_mtxrun_post
 
 %preun
     if [ $1 -eq 0 ]; then
@@ -43,8 +43,8 @@ letters may be amended by a wide range of style specifications.
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_post
 	%_texmf_mktexlsr_post
+	%_texmf_mtxrun_post
     fi
 
 #-----------------------------------------------------------------------
