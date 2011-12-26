@@ -1,11 +1,11 @@
-# revision 24045
+# revision 24882
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-letter
-# catalog-date 2011-09-20 21:18:19 +0200
+# catalog-date 2011-12-14 08:38:50 +0100
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-context-letter
-Version:	20110920
+Version:	20111214
 Release:	1
 Summary:	Context package for writing letters
 Group:		Publishing
@@ -13,113 +13,82 @@ URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires(post):	texlive-context
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A means of writing 'vanilla' letters is provided; the design of
 letters may be amended by a wide range of style specifications.
 
 %pre
-    %_texmf_mtxrun_pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_mtxrun_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_pre
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_mtxrun_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/context/interface/third/t-letter.xml
-%{_texmfdistdir}/tex/context/interface/third/t-resume.xml
-%{_texmfdistdir}/tex/context/third/letter/base/t-correspondence.mkii
-%{_texmfdistdir}/tex/context/third/letter/base/t-correspondence.mkiv
-%{_texmfdistdir}/tex/context/third/letter/base/t-correspondence.tex
-%{_texmfdistdir}/tex/context/third/letter/base/t-letter.tex
-%{_texmfdistdir}/tex/context/third/letter/base/t-resume.tex
-%{_texmfdistdir}/tex/context/third/letter/extension/addrentry.nle
-%{_texmfdistdir}/tex/context/third/letter/extension/corres.nle
-%{_texmfdistdir}/tex/context/third/letter/extension/label.nle
-%{_texmfdistdir}/tex/context/third/letter/extension/optimize.nle
-%{_texmfdistdir}/tex/context/third/letter/extension/pragma.nle
-%{_texmfdistdir}/tex/context/third/letter/interface/default.nli
-%{_texmfdistdir}/tex/context/third/letter/interface/default.nri
-%{_texmfdistdir}/tex/context/third/letter/interface/knuth.nli
-%{_texmfdistdir}/tex/context/third/letter/interface/moderncv.nri
-%{_texmfdistdir}/tex/context/third/letter/interface/pragma.nli
-%{_texmfdistdir}/tex/context/third/letter/style/blockstyle.nls
-%{_texmfdistdir}/tex/context/third/letter/style/casual.nrs
-%{_texmfdistdir}/tex/context/third/letter/style/classic.nrs
-%{_texmfdistdir}/tex/context/third/letter/style/default.nls
-%{_texmfdistdir}/tex/context/third/letter/style/default.nrs
-%{_texmfdistdir}/tex/context/third/letter/style/dina.nls
-%{_texmfdistdir}/tex/context/third/letter/style/dinb.nls
-%{_texmfdistdir}/tex/context/third/letter/style/dutch.nls
-%{_texmfdistdir}/tex/context/third/letter/style/english.nls
-%{_texmfdistdir}/tex/context/third/letter/style/french.nls
-%{_texmfdistdir}/tex/context/third/letter/style/fullblock.nls
-%{_texmfdistdir}/tex/context/third/letter/style/gbrief.nls
-%{_texmfdistdir}/tex/context/third/letter/style/hanging.nls
-%{_texmfdistdir}/tex/context/third/letter/style/knuth.nls
-%{_texmfdistdir}/tex/context/third/letter/style/memo.nls
-%{_texmfdistdir}/tex/context/third/letter/style/modified.nls
-%{_texmfdistdir}/tex/context/third/letter/style/pragma.nls
-%{_texmfdistdir}/tex/context/third/letter/style/semiblock.nls
-%{_texmfdistdir}/tex/context/third/letter/style/simplified.nls
-%{_texmfdistdir}/tex/context/third/letter/style/swiss.nls
-%{_texmfdistdir}/tex/context/third/letter/style/swissleft.nls
-%{_texmfdistdir}/tex/context/third/letter/style/user.ori
+%{_texmfdistdir}/tex/context/interface/third/t-correspondence.xml
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.lua
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.mkii
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.mkvi
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-01.mkii
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-01.mkvi
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkii
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkvi
+%{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkii
+%{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkiv
+%{_texmfdistdir}/tex/context/third/letter/base/t-memo.mkii
+%{_texmfdistdir}/tex/context/third/letter/base/t-memo.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-default.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-default.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dina.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dina.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dinb.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dinb.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dutch.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dutch.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-french.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-french.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-gbrief.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-gbrief.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swiss.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swiss.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swissleft.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swissleft.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-test.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-default.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-default.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-margin.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-margin.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-memo.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-memo.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkiv
 %doc %{_texmfdistdir}/doc/context/third/letter/README
-%doc %{_texmfdistdir}/doc/context/third/letter/correspondence.pdf
-%doc %{_texmfdistdir}/doc/context/third/letter/todo.txt
-#- source
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-environment.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-introduction.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-labeltext.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-background.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-beginner.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-examples.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-extension.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-header.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-interface.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-layout.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-pagenumber.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-reference.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-styles.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-letter-values.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-resume-examples.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-resume-interface.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence-revision.tex
-%doc %{_texmfdistdir}/source/context/third/letter/doc/correspondence.tex
 %doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
 mkdir -p %{buildroot}%{_tlpkgobjdir}
 cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
