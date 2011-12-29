@@ -23,16 +23,8 @@ Requires(post):	texlive-context
 A means of writing 'vanilla' letters is provided; the design of
 letters may be amended by a wide range of style specifications.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -79,7 +71,6 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkiv
 %doc %{_texmfdistdir}/doc/context/third/letter/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -90,5 +81,3 @@ letters may be amended by a wide range of style specifications.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
