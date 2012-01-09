@@ -1,4 +1,4 @@
-# revision 24882
+# revision 24958
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-letter
 # catalog-date 2011-12-14 08:38:50 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-letter
 Version:	20111214
-Release:	2
+Release:	3
 Summary:	Context package for writing letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
@@ -45,6 +45,8 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkiv
 %{_texmfdistdir}/tex/context/third/letter/base/t-memo.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/t-memo.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-blockstyle.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-blockstyle.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-default.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-default.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dina.mkii
@@ -55,13 +57,22 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-dutch.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-french.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-french.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-fullblock.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-fullblock.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-gbrief.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-gbrief.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-hanging.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-hanging.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-modified.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-modified.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-semiblock.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-semiblock.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-simplified.mkii
+%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-simplified.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swiss.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swiss.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swissleft.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/letter-imp-swissleft.mkiv
-%{_texmfdistdir}/tex/context/third/letter/style/letter-imp-test.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-default.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-default.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-margin.mkii
