@@ -1,11 +1,11 @@
-# revision 25174
+# revision 25449
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-letter
-# catalog-date 2012-01-22 10:39:25 +0100
+# catalog-date 2012-02-13 08:46:03 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-context-letter
-Version:	20120122
+Version:	20120213
 Release:	1
 Summary:	Context package for writing letters
 Group:		Publishing
@@ -22,9 +22,8 @@ Requires(post):	texlive-context
 
 %description
 A means of writing 'vanilla' letters and memos is provided,
-with support covvering of for Context Mkii, Mkiv and Mkvi. The
-design of letters may be amended by a wide range of style
-specifications.
+with support covering Context Mkii and Mkiv. The design of
+letters may be amended by a wide range of style specifications.
 
 %post
     %{_sbindir}/texlive.post
