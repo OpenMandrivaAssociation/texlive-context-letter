@@ -1,4 +1,4 @@
-# revision 27229
+# revision 27787
 # category ConTeXt
 # catalog-ctan /macros/context/contrib/context-letter
 # catalog-date 2012-02-13 08:46:03 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-letter
 Version:	20120213
-Release:	2
+Release:	3
 Summary:	Context package for writing letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
@@ -34,6 +34,8 @@ letters may be amended by a wide range of style specifications.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/tex/context/interface/third/t-letter.xml
+%{_texmfdistdir}/tex/context/interface/third/t-memo.xml
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.lua
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-00.mkvi
@@ -41,6 +43,7 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-01.mkvi
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkvi
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-06.mkvi
 %{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkiv
 %{_texmfdistdir}/tex/context/third/letter/base/t-memo.mkii
