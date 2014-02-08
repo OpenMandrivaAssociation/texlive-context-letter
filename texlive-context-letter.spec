@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-letter
 Version:	20120213
-Release:	2
+Release:	3
 Summary:	Context package for writing letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
