@@ -1,12 +1,6 @@
-# revision 31331
-# category ConTeXt
-# catalog-ctan /macros/context/contrib/context-letter
-# catalog-date 2012-09-24 22:26:06 +0200
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-context-letter
-Version:	20120924
-Release:	9
+Version:	20171114
+Release:	1
 Summary:	Context package for writing letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
@@ -43,6 +37,7 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-01.mkvi
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-02.mkvi
+%{_texmfdistdir}/tex/context/third/letter/base/s-cor-03.mkvi
 %{_texmfdistdir}/tex/context/third/letter/base/s-cor-06.mkvi
 %{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkii
 %{_texmfdistdir}/tex/context/third/letter/base/t-letter.mkiv
@@ -88,6 +83,19 @@ letters may be amended by a wide range of style specifications.
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-memo.mkiv
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkii
 %{_texmfdistdir}/tex/context/third/letter/style/memo-imp-table.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual-blue.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual-green.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual-grey.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual-orange.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual-red.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-casual.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic-blue.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic-green.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic-grey.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic-orange.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic-red.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-classic.mkiv
+%{_texmfdistdir}/tex/context/third/letter/style/resume-imp-default.mkiv
 %doc %{_texmfdistdir}/doc/context/third/letter/README
 
 #-----------------------------------------------------------------------
