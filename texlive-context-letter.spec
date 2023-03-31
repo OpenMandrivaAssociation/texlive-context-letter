@@ -1,6 +1,6 @@
 Name:		texlive-context-letter
 Version:	60787
-Release:	1
+Release:	2
 Summary:	Context package for writing letters
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
