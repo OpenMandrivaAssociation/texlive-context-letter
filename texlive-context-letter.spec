@@ -3,7 +3,7 @@ Version:	60787
 Release:	2
 Summary:	Context package for writing letters
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-letter
+URL:		https://www.ctan.org/tex-archive/macros/context/contrib/context-letter
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-letter.doc.r%{version}.tar.xz
